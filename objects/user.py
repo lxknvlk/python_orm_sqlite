@@ -1,8 +1,9 @@
 from manager import update
 from manager import fetch
 from manager import create
+from object import Object
 
-class User:
+class User(Object):
     table = "users"
     idfield = "username"
     fields = ["username VARCHAR PRIMARY KEY", "password VARCHAR", "email VARCHAR", "x INTEGER", "y INTEGER", "z INTEGER",
@@ -25,14 +26,14 @@ class User:
     created = ""
     updated = ""
 
-    def update(self):
-        return update(self)
-
-    def create(self):
-        return create(self)
-
-    def fetch(self):
-        return fetch(self)
+    # def update(self):
+    #     return update(self)
+    #
+    # def create(self):
+    #     return create(self)
+    #
+    # def fetch(self):
+    #     return fetch(self)
 
     def __str__(self):
         return self.username + "/" + self.password + "/" + self.email + "/" + self.ip
