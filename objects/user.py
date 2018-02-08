@@ -4,25 +4,24 @@ from manager import create
 from object import Object
 
 class User(Object):
-    table = "users"
-    fields = ["username", "password", "email", "x", "y", "z", "ip", "logged", "created", "updated"]
+    table = "user"
 
-    username = ""
-    password = ""
-    email = ""
+    username = "" ##
+    password = "" ##
+    email = "" ##
 
-    location = ""
-    x = 0
-    y = 0
-    z = 0
+    location = "" ##
+    x = 0 ##
+    y = 0 ##
+    z = 0 ##
 
     socket = None
     server = 0
-    ip = ""
-    logged = 0
+    ip = "" ##
+    logged = 0 ##
 
-    created = ""
-    updated = ""
+    created = "" ##
+    updated = "" ##
 
     def __str__(self):
         return self.username + "/" + self.password + "/" + self.email + "/" + self.ip

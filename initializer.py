@@ -1,7 +1,7 @@
-import sqlite3, sys, inspect, os, const
+import sqlite3, sys, inspect, os, const, manager
 
 from objects.user import User
-# from objects.location import Location
+from objects.location import Location
 
 def init():
     print "creating database with next structure:"
@@ -20,8 +20,10 @@ def init():
             print "table: " + str(obj.table)
             query += "create table if not exists " + str(obj.table) + "("
 
-            for x in range(0, len(obj.fields)):
-                field = obj.fields[x]
+            fields = manager.getClassFields(obj)
+
+            for x in range(0, len(fields)):
+                field = fields[x]
                 print "         " + field
                 query += field + " "
                 f = getattr(obj, field)
@@ -34,7 +36,7 @@ def init():
                 if x == 0:
                     query += " PRIMARY KEY"
 
-                if x != len(obj.fields) - 1:
+                if x != len(fields) - 1:
                     query += ", "
 
             query += ")"

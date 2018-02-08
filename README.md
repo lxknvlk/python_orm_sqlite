@@ -5,8 +5,8 @@ Each object has methods:
 .create() .update() and .fetch()
 
 To add a new field to a class:
-1) add it to class, initialize.
-2) add its name to fields array.
+1) add it to class, initialize with needed type
+2) add ## after the field, this indicates that field is persistable
 3)run python remake.py. 
 
 Then you can create the object and set the new field an call .create() method and it will be persisted in the table with the newly added field. 
