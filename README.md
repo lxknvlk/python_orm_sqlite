@@ -37,6 +37,7 @@ To fetch an object you have to set its idfield and call .fetch()
 u = User()
 u.username = "bob"
 print u.fetch()
+print u.email
 ```
 
 user will be searched by username and full object will be returned
