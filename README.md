@@ -28,7 +28,7 @@ u.username = "bob"
 u.password = "123ss"
 u.email = "bob@aooo.ooo"
 u.ip = "123.123.123.123"
-print u.create()
+u.create()
 ```
 
 To update an object you have to set its idfield and additional fields, then call .update() on it.
@@ -38,7 +38,7 @@ u = User()
 u.username = "bob"
 u.password = "ness"
 u.email = "newehehe@aooo.com"
-print u.update()
+u.update()
 ```
 new values will be saved to object with username "bob"
 
@@ -47,7 +47,7 @@ To fetch an object you have to set its idfield and call .fetch()
 ```
 u = User()
 u.username = "bob"
-print u.fetch()
+u.fetch()
 print u.email
 ```
 
