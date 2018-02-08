@@ -16,8 +16,8 @@ To add a new field to a class:
 4) run python remake.py. 
 
 To add a new class:
-1) create <name>.py class file in objects/ folder
-2) add a field table that is the same as <name>
+1) create name.py class file in objects/ folder
+2) add a field table that is the same as file name without extension
 3) add fields, initialize them and put ## after
 4) run python remake.py 
 
