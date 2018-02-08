@@ -5,10 +5,21 @@ Each object has methods:
 .create() .update() and .fetch()
 
 To add a new field to a class:
-1) add it to class, initialize with needed type
+1) add it to class, initialize with needed type like this
+```
+    location = "" ##
+    x = 0 ##
+```
+
 2) add ## after the field, this indicates that field is persistable
 3) first field that has ## will be primary key
 3)run python remake.py. 
+
+To add a new class:
+1) create <name>.py class file in objects/ folder
+2) add a field table that is the same as <name>
+3) add fields, initialize them and put ## after
+4) run python remake.py 
 
 Then you can create the object and set the new field an call .create() method and it will be persisted in the table with the newly added field like this:
 ```
