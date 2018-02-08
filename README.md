@@ -13,7 +13,7 @@ To add a new field to a class:
 
 2) add ## after the field, this indicates that field is persistable
 3) first field that has ## will be primary key
-3)run python remake.py. 
+4) run python remake.py. 
 
 To add a new class:
 1) create <name>.py class file in objects/ folder
