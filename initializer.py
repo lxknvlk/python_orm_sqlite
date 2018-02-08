@@ -1,7 +1,7 @@
 import sqlite3, sys, inspect, os, const
 
 from objects.user import User
-from objects.location import Location
+# from objects.location import Location
 
 def init():
     print "creating database with next structure:"
@@ -23,7 +23,17 @@ def init():
             for x in range(0, len(obj.fields)):
                 field = obj.fields[x]
                 print "         " + field
-                query += field
+                query += field + " "
+                f = getattr(obj, field)
+
+                if type(f) is str:
+                    query += "VARCHAR"
+                elif type(f) is int:
+                    query += "INTEGER"
+
+                if x == 0:
+                    query += " PRIMARY KEY"
+
                 if x != len(obj.fields) - 1:
                     query += ", "
 

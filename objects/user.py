@@ -5,9 +5,7 @@ from object import Object
 
 class User(Object):
     table = "users"
-    idfield = "username"
-    fields = ["username VARCHAR PRIMARY KEY", "password VARCHAR", "email VARCHAR", "x INTEGER", "y INTEGER", "z INTEGER",
-              "ip VARCHAR", "logged INTEGER", "created VARCHAR", "updated VARCHAR"]
+    fields = ["username", "password", "email", "x", "y", "z", "ip", "logged", "created", "updated"]
 
     username = ""
     password = ""
@@ -25,15 +23,6 @@ class User(Object):
 
     created = ""
     updated = ""
-
-    # def update(self):
-    #     return update(self)
-    #
-    # def create(self):
-    #     return create(self)
-    #
-    # def fetch(self):
-    #     return fetch(self)
 
     def __str__(self):
         return self.username + "/" + self.password + "/" + self.email + "/" + self.ip
